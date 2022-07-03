@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #333;
+  color: #fff;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -12,11 +12,12 @@ a {
 }
 
 .body {
-  display: block;
-  background-image: none;
-  background-size: auto;
-  background-repeat: repeat;
-  background-attachment: scroll;
+  background-color: #000;
+  background-image: url('../images/homepage_1d.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-weight: 400;
 }
 
@@ -62,8 +63,7 @@ a {
   top: 0%;
   right: 0%;
   bottom: auto;
-  border-bottom: 1px dashed #000;
-  background-color: hsla(0, 0%, 100%, 0.4);
+  background-color: rgba(0, 149, 255, 0.7);
   background-image: none;
   background-size: auto;
   -webkit-backdrop-filter: blur(15px);
@@ -79,7 +79,7 @@ a {
   transition: transform 200ms ease, opacity 200ms ease;
   transition: transform 200ms ease, opacity 200ms ease, -webkit-transform 200ms ease;
   font-family: fira-sans, sans-serif;
-  color: #000;
+  color: #fff;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -93,14 +93,12 @@ a {
 }
 
 .nav-link.w--current {
-  color: #000;
+  color: #fff;
   cursor: pointer;
 }
 
 .image {
   width: 150px;
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
 }
 
 .nav-menu {
@@ -156,7 +154,6 @@ a {
   text-indent: -10px;
   text-transform: uppercase;
   white-space: nowrap;
-  mix-blend-mode: multiply;
 }
 
 .container-3 {
@@ -207,7 +204,6 @@ a {
 }
 
 .lottie {
-  position: relative;
   z-index: -1;
   display: -webkit-box;
   display: -webkit-flex;
@@ -224,7 +220,7 @@ a {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  mix-blend-mode: multiply;
+  mix-blend-mode: overlay;
 }
 
 .paragraph-4 {
@@ -268,31 +264,31 @@ a {
   display: inline-block;
   padding: 3px 10px;
   border-radius: 8px;
-  background-color: #006695;
+  background-color: rgba(0, 149, 255, 0.7);
   background-image: none;
   background-size: auto;
   background-attachment: scroll;
-  -webkit-backdrop-filter: contrast(200%);
-  backdrop-filter: contrast(200%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 .dzial.over {
   margin-top: -45px;
   padding-bottom: 0px;
+  border-bottom-style: none;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background-color: #006695;
   background-image: none;
   background-size: auto;
 }
 
 .dzial.kontakt {
+  border-top-style: none;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
 
 .text-block {
-  color: #fff;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -355,17 +351,18 @@ a {
 }
 
 .section-2.dark {
-  background-color: #006695;
   background-image: none;
   background-size: auto;
   background-repeat: repeat;
-  -webkit-backdrop-filter: contrast(200%);
-  backdrop-filter: contrast(200%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .section-2.dark._2 {
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .txt {
@@ -374,6 +371,8 @@ a {
 
 .txt._40 {
   margin-top: 40px;
+  color: #0095ff;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -441,14 +440,16 @@ a {
 .logo_kontakt {
   width: 200px;
   max-width: 200px;
+  -webkit-filter: none;
+  filter: none;
 }
 
 .section_stopka {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-image: url('../images/bg_len.jpg');
-  background-position: 0px 0px;
-  background-size: auto;
+  background-color: rgba(0, 149, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .section-5 {
@@ -474,14 +475,14 @@ a {
 
 .text-span-3 {
   font-family: gill-sans-nova, sans-serif;
-  color: #006695;
+  color: #0095ff;
   font-size: 22px;
   font-weight: 600;
 }
 
 .text-span-4 {
   font-family: gill-sans-nova, sans-serif;
-  color: rgba(0, 0, 0, 0.69);
+  color: hsla(0, 0%, 100%, 0.78);
   font-size: 22px;
   font-weight: 600;
 }
@@ -490,7 +491,7 @@ a {
   position: relative;
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
-  color: #000;
+  color: #fff;
   font-size: 20px;
   text-decoration: none;
 }
@@ -505,7 +506,7 @@ a {
 
 .dots {
   height: 202px;
-  border-left: 1px dashed #000;
+  border-left: 1px dashed #fff;
 }
 
 .dots.stopka {
@@ -625,10 +626,10 @@ a {
 }
 
 .container-8.up {
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .image-4 {
@@ -676,6 +677,8 @@ a {
   -ms-flex-item-align: auto;
   -ms-grid-row-align: auto;
   align-self: auto;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
 
 .paragraph-7 {
@@ -695,8 +698,15 @@ a {
   flex: 0 auto;
 }
 
+.html-embed-2 {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  mix-blend-mode: hard-light;
+}
+
 .google-maps {
   margin-bottom: -4px;
+  background-color: #0095ff;
 }
 
 .section-6 {
@@ -732,6 +742,7 @@ a {
 .link-2 {
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
+  color: #fff;
   font-size: 24px;
   font-weight: 600;
 }
@@ -743,6 +754,7 @@ a {
 .link-3 {
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
+  color: #fff;
   font-size: 26px;
   font-weight: 600;
 }
@@ -831,6 +843,8 @@ a {
   width: 42px;
   margin: 10px;
   opacity: 0.66;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
 }
@@ -852,7 +866,7 @@ a {
   width: 100%;
   height: 0px;
   margin-top: 20px;
-  border-top: 1px dashed #000;
+  border-top: 1px dashed #fff;
 }
 
 .zadzwon-teraz {
@@ -1066,11 +1080,10 @@ a {
 .dv-fc {
   height: 385px;
   border-radius: 8px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0095ff), to(#0095ff));
-  background-image: linear-gradient(180deg, #0095ff, #0095ff);
-  background-position: 0px 0px;
-  background-size: auto;
-  background-repeat: repeat;
+  background-image: url('../images/homepage.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .paragraph-11 {
@@ -1147,7 +1160,7 @@ a {
   transition: transform 200ms ease, opacity 200ms ease;
   transition: transform 200ms ease, opacity 200ms ease, -webkit-transform 200ms ease;
   font-family: fira-sans, sans-serif;
-  color: #000;
+  color: #fff;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1158,6 +1171,10 @@ a {
   -webkit-transform: translate(0px, -5px);
   -ms-transform: translate(0px, -5px);
   transform: translate(0px, -5px);
+}
+
+.dropdown-toggle.w--open {
+  color: #fff;
 }
 
 .dropdown-list {
@@ -1172,7 +1189,7 @@ a {
   overflow: hidden;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 149, 255, 0.7);
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
 }
@@ -1224,6 +1241,7 @@ a {
 .hover-move {
   overflow: hidden;
   border-radius: 18px;
+  background-color: rgba(0, 149, 255, 0.17);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.07)), to(rgba(0, 0, 0, 0.07)));
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
   background-position: 0px 0px;
@@ -1307,10 +1325,6 @@ a {
 }
 
 @media screen and (max-width: 991px) {
-  .container {
-    border-bottom: 1px dashed #000;
-  }
-
   .nav-link {
     font-size: 18px;
   }
@@ -1327,9 +1341,7 @@ a {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    border-top: 1px dotted #000;
-    border-bottom: 1px dashed #000;
-    background-color: transparent;
+    background-color: rgba(0, 149, 255, 0.7);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
   }
@@ -1340,10 +1352,6 @@ a {
 
   .menu-button.w--open {
     background-color: transparent;
-  }
-
-  .icon {
-    color: #000;
   }
 
   .container-2 {
@@ -1506,7 +1514,7 @@ a {
   }
 
   .dropdown-link {
-    color: #000;
+    color: #fff;
     font-size: 14px;
   }
 
@@ -1606,12 +1614,18 @@ a {
     padding-left: 30px;
   }
 
+  .section-2.dark._2 {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
   .txt {
     text-align: left;
   }
 
   .txt._40 {
-    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .section-3 {
@@ -1726,7 +1740,6 @@ a {
   }
 
   .section-6 {
-    padding-top: 0px;
     padding-bottom: 30px;
   }
 
@@ -1886,6 +1899,11 @@ a {
     -ms-flex-align: center;
     align-items: center;
     background-color: #333;
+  }
+
+  .container-10 {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
