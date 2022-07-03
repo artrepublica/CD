@@ -13,13 +13,13 @@ a {
 
 .body {
   background-color: #000;
-  background-image: url('../images/homepage_1d.jpg');
+  background-image: url('../images/homepage_1bB.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   font-weight: 400;
 }
 
@@ -1033,8 +1033,9 @@ a {
   right: 0%;
   bottom: 0%;
   z-index: -99999999999;
-  display: none;
-  background-image: none;
+  background-image: url('../images/homepage_1bB.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .bg {
@@ -1043,6 +1044,7 @@ a {
   top: 0%;
   right: 0%;
   bottom: 0%;
+  display: none;
 }
 
 .bg._2 {
@@ -1094,7 +1096,7 @@ a {
 .dv-fc {
   height: 385px;
   border-radius: 8px;
-  background-image: url('../images/homepage.jpg');
+  background-image: url('../images/homepage_1bo.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1326,7 +1328,7 @@ a {
 
 .div-block-95 {
   height: 60vh;
-  background-image: url('../images/homepage.jpg');
+  background-image: url('../images/homepage_1bo.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: repeat-y;
