@@ -18,6 +18,8 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   font-weight: 400;
 }
 
@@ -300,6 +302,8 @@ a {
 
 .ar.rafal {
   margin-left: 182px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
 
 .osoba {
@@ -354,15 +358,14 @@ a {
   background-image: none;
   background-size: auto;
   background-repeat: repeat;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .section-2.dark._2 {
-  padding-top: 0px;
   padding-bottom: 20px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .txt {
