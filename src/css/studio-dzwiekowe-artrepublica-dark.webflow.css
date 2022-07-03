@@ -192,6 +192,7 @@ a {
 
 .misja {
   margin-top: -353px;
+  text-align: center;
 }
 
 .witamy {
@@ -1096,7 +1097,7 @@ a {
 .dv-fc {
   height: 385px;
   border-radius: 8px;
-  background-image: url('../images/homepage_1bo.jpg');
+  background-image: url('../images/homepage.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
