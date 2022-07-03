@@ -1018,8 +1018,8 @@ a {
 .dv-fc {
   height: 385px;
   border-radius: 8px;
-  background-image: url('../images/homepage.jpg');
-  background-position: 50% 50%;
+  background-image: url('../images/tempImagepBe4qe.jpg');
+  background-position: 0px 0px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1855,6 +1855,14 @@ a {
     padding-right: 30px;
     padding-left: 30px;
   }
+
+  .text-span-8 {
+    color: #fff;
+  }
+
+  .text-span-9 {
+    color: #fff;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1957,6 +1965,14 @@ a {
   .lottie-animation-4 {
     width: 100%;
     max-width: 420px;
+  }
+
+  .text-span-8 {
+    color: #fff;
+  }
+
+  .text-span-9 {
+    color: #fff;
   }
 }
 
