@@ -262,7 +262,12 @@ a {
   border-radius: 0px 0px 8px 8px;
 }
 
-.text-block {
+.dzialy {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -1316,6 +1321,13 @@ a {
   color: #fff;
 }
 
+.kameralne {
+  margin-top: 40px;
+  color: #0095ff;
+  font-size: 24px;
+  line-height: 28px;
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     font-size: 18px;
@@ -1914,6 +1926,11 @@ a {
 
   .image-15 {
     max-height: 290px;
+  }
+
+  .kameralne {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
