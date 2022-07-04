@@ -906,6 +906,11 @@ a {
   border-radius: 18px;
 }
 
+.immage_grid.invert {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
 .div_grid {
   overflow: hidden;
   max-width: 100%;
@@ -1035,10 +1040,6 @@ a {
 .dv-fc {
   height: 385px;
   border-radius: 8px;
-  background-image: url('../images/tempImagepBe4qe.jpg');
-  background-position: 0px 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .paragraph-11 {
@@ -1294,6 +1295,11 @@ a {
 
 .youtube {
   width: 100%;
+}
+
+.image-15 {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
 
 @media screen and (max-width: 991px) {
