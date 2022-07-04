@@ -479,6 +479,7 @@ a {
   -ms-grid-row-align: center;
   align-self: center;
   font-family: gill-sans-nova, sans-serif;
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
 }
@@ -1268,6 +1269,10 @@ a {
 
 .div-block-96 {
   width: 30px;
+}
+
+.bialecyfry {
+  color: #fff;
 }
 
 @media screen and (max-width: 991px) {
