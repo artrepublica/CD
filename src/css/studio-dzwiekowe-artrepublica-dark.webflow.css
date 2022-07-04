@@ -1302,6 +1302,11 @@ a {
   filter: invert(100%);
 }
 
+.tytul {
+  padding: 5px 10px 10px;
+  color: #fff;
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     font-size: 18px;
@@ -1828,11 +1833,13 @@ a {
   }
 
   .dv-kompleks {
-    height: 295px;
+    height: auto;
+    max-height: 295px;
   }
 
   .dv-fc {
-    height: 280px;
+    height: auto;
+    max-height: 280px;
   }
 
   .dropdown-list.w--open {
@@ -1894,6 +1901,10 @@ a {
 
   .text-span-9 {
     color: #fff;
+  }
+
+  .image-15 {
+    max-height: 290px;
   }
 }
 
