@@ -1282,7 +1282,15 @@ a {
 }
 
 .div-block-95 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 60vh;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   background-image: url('../images/homepage_1bo.jpg');
   background-position: 50% 50%;
   background-size: cover;
