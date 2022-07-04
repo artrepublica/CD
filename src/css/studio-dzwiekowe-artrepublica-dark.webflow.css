@@ -574,6 +574,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 60px;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
@@ -1281,7 +1282,7 @@ a {
   height: 100vh;
 }
 
-.div-block-95 {
+.sprzet {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1334,6 +1335,10 @@ a {
   color: #0095ff;
   font-size: 24px;
   line-height: 28px;
+}
+
+._120 {
+  height: 120px;
 }
 
 @media screen and (max-width: 991px) {
