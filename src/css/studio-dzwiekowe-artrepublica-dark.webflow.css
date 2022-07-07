@@ -287,6 +287,7 @@ a {
 
 .osoba {
   display: inline-block;
+  overflow: hidden;
   margin-top: 20px;
 }
 
@@ -320,6 +321,7 @@ a {
 }
 
 .txt {
+  overflow: hidden;
   text-align: justify;
 }
 
@@ -580,6 +582,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   height: 60px;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
@@ -1344,6 +1347,7 @@ a {
 }
 
 .kameralne {
+  overflow: hidden;
   margin-top: 40px;
   color: #0095ff;
   font-size: 24px;
