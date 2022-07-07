@@ -294,6 +294,7 @@ a {
 
 .section-2 {
   overflow: hidden;
+  padding-top: 40px;
   padding-bottom: 40px;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
@@ -1343,7 +1344,7 @@ a {
 
 .kameralne {
   margin-top: 40px;
-  font-family: Sundaylove, sans-serif;
+  font-family: Sundaylove, 'Trebuchet MS', sans-serif;
   color: #0095ff;
   font-size: 24px;
   line-height: 28px;
