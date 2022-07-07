@@ -186,6 +186,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   width: 976px;
   height: 800px;
   margin-top: -116px;
@@ -219,7 +220,8 @@ a {
 }
 
 .section {
-  margin-top: 60px;
+  margin-top: 0px;
+  padding-top: 60px;
 }
 
 .lottie-animation {
@@ -296,18 +298,13 @@ a {
   overflow: hidden;
   padding-top: 40px;
   padding-bottom: 40px;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
 }
 
 .section-2.dark {
-  padding-top: 40px;
   background-color: rgba(0, 149, 255, 0.7);
   background-image: none;
   background-size: auto;
   background-repeat: repeat;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
 }
 
 .section-2.dark._2 {
@@ -1292,6 +1289,10 @@ a {
   height: 100vh;
 }
 
+.container-9 {
+  overflow: hidden;
+}
+
 .sprzet {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1344,7 +1345,6 @@ a {
 
 .kameralne {
   margin-top: 40px;
-  font-family: Sundaylove, 'Trebuchet MS', sans-serif;
   color: #0095ff;
   font-size: 24px;
   line-height: 28px;
