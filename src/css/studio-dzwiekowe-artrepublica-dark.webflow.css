@@ -1168,6 +1168,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  padding-right: 10px;
+  padding-left: 10px;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   background-color: rgba(0, 149, 255, 0.7);
@@ -1180,13 +1182,15 @@ a {
 }
 
 .dropdown-link {
+  padding-right: 10px;
+  padding-left: 10px;
   -webkit-transition: opacity 200ms ease, -webkit-transform 200ms ease;
   transition: opacity 200ms ease, -webkit-transform 200ms ease;
   transition: transform 200ms ease, opacity 200ms ease;
   transition: transform 200ms ease, opacity 200ms ease, -webkit-transform 200ms ease;
   color: #fff;
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 13px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -1358,6 +1362,11 @@ a {
   height: 120px;
 }
 
+.text-span-10 {
+  color: #fff;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     font-size: 18px;
@@ -1513,14 +1522,17 @@ a {
   }
 
   .dropdown-list.w--open {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding-left: 0px;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    display: inline-block;
+    padding-left: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     background-color: transparent;
     background-image: none;
     background-size: auto;
