@@ -1257,11 +1257,14 @@ a {
 
 .obraz {
   overflow: hidden;
+  width: 100vw;
+  max-width: 940px;
   margin-bottom: 40px;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   border-radius: 18px;
+  box-shadow: 7px 7px 11px 0 rgba(0, 0, 0, 0.39);
 }
 
 .video {
