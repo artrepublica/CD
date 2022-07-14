@@ -1257,8 +1257,7 @@ a {
 
 .obraz {
   overflow: hidden;
-  width: 100vw;
-  max-width: 940px;
+  max-width: 100vw;
   margin-bottom: 40px;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
@@ -1568,6 +1567,10 @@ a {
 
   .dropdown-link.w--current {
     font-size: 14px;
+  }
+
+  .obraz {
+    width: 730px;
   }
 
   .html-embed-3 {
@@ -1943,6 +1946,10 @@ a {
   .dropdown-link {
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  .obraz {
+    width: 100%;
   }
 
   .html-embed-3 {
