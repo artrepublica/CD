@@ -1369,6 +1369,40 @@ a {
   font-size: 20px;
 }
 
+.heading-3 {
+  margin-top: 0px;
+}
+
+.heading-4 {
+  margin-top: 0px;
+}
+
+.link-txt-white-bold {
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.link-txt-white-bold:hover {
+  opacity: 0.76;
+}
+
+.txt-cabs-bold {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.list {
+  margin-bottom: 40px;
+}
+
+.lista {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     font-size: 18px;
