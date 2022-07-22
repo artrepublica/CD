@@ -919,6 +919,10 @@ a {
   width: 920px;
 }
 
+.link_kategoria._1.w--current {
+  width: 30px;
+}
+
 .immage_grid {
   overflow: hidden;
   width: 300px;
@@ -1245,6 +1249,25 @@ a {
   transform: translate(0px, -5px);
 }
 
+.hover-move._300 {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  width: 300px;
+  max-width: 100%;
+  margin: 0px 5px 5px;
+  box-shadow: 1px 1px 3px 0 #000;
+  opacity: 1;
+  -webkit-transition: none 0ms ease;
+  transition: none 0ms ease;
+}
+
+.hover-move._300:hover {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .link-txt {
   position: relative;
   top: -30px;
@@ -1369,7 +1392,7 @@ a {
   font-size: 20px;
 }
 
-.heading-3 {
+.h {
   margin-top: 0px;
 }
 
