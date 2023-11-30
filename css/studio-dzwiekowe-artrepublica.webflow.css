@@ -787,6 +787,10 @@ a {
   margin: 0;
 }
 
+.link_kategoria._2.off {
+  display: none;
+}
+
 .immage_grid {
   width: 300px;
   border-radius: 18px;
