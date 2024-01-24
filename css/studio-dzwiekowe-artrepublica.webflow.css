@@ -64,7 +64,7 @@ a {
   background-color: var(--black);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
-  background-image: url('../images/homepage_1bB.jpg');
+  background-image: url('../images/Sound_Studio_ARTREPUBLICA_A.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -848,8 +848,8 @@ a {
 
 .bg_loop {
   z-index: -2147483648;
-  background-image: url('../images/homepage_1bB.jpg');
-  background-position: 50%;
+  background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.jpg');
+  background-position: 0 0;
   background-size: cover;
   position: fixed;
   top: 0%;
@@ -1134,7 +1134,7 @@ a {
 
 .sprzet {
   height: 60vh;
-  background-image: url('../images/homepage_1bo.jpg');
+  background-image: url('../images/Sound_Studio_ARTREPUBLICA_A.jpg');
   background-position: 50%;
   background-repeat: repeat-y;
   background-size: cover;
