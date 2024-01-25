@@ -313,7 +313,7 @@ a {
 }
 
 .txt {
-  text-align: justify;
+  text-align: left;
   overflow: hidden;
 }
 
