@@ -1,3 +1,19 @@
+@font-face {
+  font-family: Sundaylove;
+  src: url('../fonts/SundayloveBold.woff2') format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Sundaylove;
+  src: url('../fonts/Sundaylove.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --white: white;
   --black: black;
@@ -741,8 +757,8 @@ a {
 }
 
 .paragraph-10 {
-  color: var(--white);
   max-width: 420px;
+  color: var(--white);
 }
 
 .div-block-18 {
@@ -1029,7 +1045,7 @@ a {
   background-image: linear-gradient(#00000012, #00000012);
   background-position: 0 0;
   border-radius: 18px;
-  transition: opacity .2s, transform .2s, opacity .2s;
+  transition: opacity .2s, transform .2s;
   overflow: hidden;
   box-shadow: 1px 1px 3px #000;
 }
