@@ -1167,9 +1167,9 @@ a {
 .kameralne {
   color: var(--dodger-blue-2);
   margin-top: 40px;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 32px;
 }
 
 ._120 {
@@ -1465,6 +1465,11 @@ a {
 
   .text-span-8, .text-span-9, .bialecyfry {
     color: var(--white);
+  }
+
+  .kameralne {
+    font-size: 26px;
+    line-height: 30px;
   }
 
   ._10 {
@@ -1771,8 +1776,8 @@ a {
   }
 
   .kameralne {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 26px;
   }
 
   .container-12 {
