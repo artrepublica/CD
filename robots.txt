@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://studiodzwiekowe.artrepublica.pl/sitemap.xml
