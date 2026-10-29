@@ -17,7 +17,7 @@
 :root {
   --white: white;
   --black: black;
-  --dodger-blue-2: #0095ff;
+  --dodger-blue-light: #0095ff;
   --menu: #962b2b;
   --dodger-blue: #002242;
 }
@@ -95,7 +95,7 @@ a {
   background-color: var(--black);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
-  background-image: url('../images/Sound_Studio_ARTREPUBLICA_A.jpg');
+  background-image: url('../images/Sound_Studio_ARTREPUBLICA_2560x1707px_A.webp');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -177,7 +177,6 @@ a {
   text-align: center;
   letter-spacing: 6px;
   text-transform: uppercase;
-  white-space: nowrap;
   font-family: gill-sans-nova, sans-serif;
   font-size: 36px;
   font-weight: 500;
@@ -285,6 +284,15 @@ a {
   border-radius: 0 0 8px 8px;
 }
 
+.dzial.dla-kogo-pracujemy {
+  background-color: #0095ff66;
+  background-image: none;
+}
+
+.dzial.realizacje {
+  background-color: #0095ff80;
+}
+
 .dzialy {
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -346,7 +354,7 @@ a {
 }
 
 .txt._40 {
-  color: var(--dodger-blue-2);
+  color: var(--dodger-blue-light);
   text-align: center;
   margin-top: 40px;
   font-size: 24px;
@@ -381,6 +389,10 @@ a {
 
 ._60.podstrona.mlims-skrzypce {
   display: none;
+}
+
+._60.dark {
+  background-color: #0095ff66;
 }
 
 .container-7 {
@@ -504,7 +516,7 @@ a {
   opacity: 1;
 }
 
-.podmenu_projekty {
+.podmenu_realizacje {
   flex-flow: column wrap;
   align-items: flex-end;
   width: 50%;
@@ -583,7 +595,7 @@ a {
 }
 
 .google-maps {
-  background-color: var(--dodger-blue-2);
+  background-color: var(--dodger-blue-light);
   height: 400px;
 }
 
@@ -731,7 +743,7 @@ a {
 
 .zadzwon {
   border: 2px solid var(--white);
-  background-color: var(--dodger-blue-2);
+  background-color: var(--dodger-blue-light);
   border-radius: 100px;
   width: 70px;
   height: 70px;
@@ -798,6 +810,11 @@ a {
   display: none;
 }
 
+.link_kategoria._1.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 .link_kategoria._2 {
   width: auto;
   margin: 0;
@@ -816,6 +833,12 @@ a {
 
 .immage_grid.invert {
   filter: invert();
+}
+
+.immage_grid.invert._200 {
+  width: 200px;
+  padding-top: 20px;
+  padding-bottom: 0;
 }
 
 .immage_grid.ar_brand {
@@ -862,7 +885,7 @@ a {
   line-height: 26px;
 }
 
-.bg_loop {
+.bloure {
   z-index: -2147483648;
   background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.jpg');
   background-position: 0 0;
@@ -875,41 +898,6 @@ a {
   display: none;
   position: fixed;
   inset: 0%;
-}
-
-.bg._2 {
-  background-image: url('../images/homepage_2.jpg');
-  background-position: 50%;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.bg._3 {
-  background-image: url('../images/homepage_3.jpg');
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.bg._1 {
-  background-image: url('../images/homepage_1.jpg');
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.bg._4 {
-  background-image: url('../images/homepage_5.jpg');
-  background-position: 50%;
-  background-attachment: fixed;
-}
-
-.bg._5 {
-  background-image: url('../images/homepage_6.jpg');
-  background-position: 50%;
-  background-attachment: fixed;
 }
 
 .kompleks {
@@ -1140,7 +1128,7 @@ a {
 }
 
 .sprzet {
-  background-image: linear-gradient(#331a0d33, #331a0d33), url('../images/Sound_Studio_ARTREPUBLICA_A_1.jpg');
+  background-image: linear-gradient(#331a0d33, #331a0d33), url('../images/Sound_Studio_ARTREPUBLICA_2560x1707px_A.webp');
   background-position: 0 0, 0 0;
   background-repeat: repeat, repeat-y;
   background-size: auto, cover;
@@ -1180,7 +1168,7 @@ a {
 }
 
 .kameralne {
-  color: var(--dodger-blue-2);
+  color: var(--dodger-blue-light);
   margin-top: 40px;
   font-size: 28px;
   font-weight: 400;
@@ -1320,6 +1308,9 @@ a {
 }
 
 .section-7 {
+  -webkit-text-fill-color: inherit;
+  background-color: #0095ff66;
+  background-clip: border-box;
   max-width: none;
   margin-left: auto;
   margin-right: auto;
@@ -1359,6 +1350,12 @@ a {
   text-align: left;
 }
 
+.heading-8.invert {
+  color: var(--white);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .utility-page-wrap {
   justify-content: center;
   align-items: center;
@@ -1380,6 +1377,21 @@ a {
   flex-direction: column;
   align-items: stretch;
   display: flex;
+}
+
+.paragraph---dla-kogo-pracujemy {
+  text-align: left;
+}
+
+.paragraph---dla-kogo-pracujemy.invert {
+  color: var(--white);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.code-embed {
+  background-color: #0095ffb3;
 }
 
 @media screen and (max-width: 991px) {
@@ -1450,7 +1462,7 @@ a {
     overflow: hidden;
   }
 
-  .podmenu_projekty {
+  .podmenu_realizacje {
     padding-left: 0;
   }
 
@@ -1536,7 +1548,7 @@ a {
   }
 
   .sprzet {
-    background-image: linear-gradient(#0000, #0000), url('../images/Sound_Studio_ARTREPUBLICA_A_1.jpg');
+    background-image: linear-gradient(#0000, #0000), url('../images/Sound_Studio_ARTREPUBLICA_2560x1707px_A.webp');
     background-position: 0 0, 60% 0;
   }
 
@@ -1803,6 +1815,9 @@ a {
   .dv-kompleks {
     height: auto;
     max-height: 295px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    padding: 0;
   }
 
   .dv-fc {
@@ -1855,7 +1870,7 @@ a {
   }
 
   .image-15 {
-    max-height: 290px;
+    max-height: 310px;
   }
 
   .kameralne {
@@ -1890,6 +1905,10 @@ a {
   .paragraph-12 {
     margin-left: 30px;
     margin-right: 30px;
+  }
+
+  .image-17 {
+    min-width: 120px;
   }
 }
 
@@ -1966,6 +1985,16 @@ a {
     max-width: 100%;
   }
 
+  .dv-kompleks {
+    max-height: none;
+    padding: 0;
+  }
+
+  .dv-fc {
+    max-height: none;
+    overflow: hidden;
+  }
+
   .logo, .logo.l {
     margin-left: 0;
     margin-right: 0;
@@ -1977,7 +2006,7 @@ a {
   }
 
   .sprzet {
-    background-image: linear-gradient(#0000, #0000), url('../images/Sound_Studio_ARTREPUBLICA_A_1.jpg');
+    background-image: linear-gradient(#0000, #0000), url('../images/Sound_Studio_ARTREPUBLICA_2560x1707px_A.webp');
     background-position: 0 0, 45% 0;
   }
 
@@ -1988,6 +2017,11 @@ a {
 
   .text-span-8, .text-span-9, .bialecyfry {
     color: var(--white);
+  }
+
+  .image-15 {
+    height: 100%;
+    overflow: hidden;
   }
 
   .vimeo {
@@ -2012,6 +2046,15 @@ a {
 
   .video_pion {
     display: block;
+  }
+
+  .heading-5 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .image-17 {
+    min-width: auto;
   }
 
   .cell {
@@ -2050,11 +2093,20 @@ a {
 #w-node-_05b9eac1-ab27-3b6f-5615-7237047d1a3b-ebcb178e {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
+  display: none;
 }
 
 #w-node-_328b9d9f-d121-f1cd-367a-884e278ce289-ebcb178e {
   grid-template-rows: auto;
   grid-template-columns: .5fr 1fr 1fr .5fr;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  #w-node-_05b9eac1-ab27-3b6f-5615-7237047d1a3b-ebcb178e {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 479px) {
