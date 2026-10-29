@@ -1,0 +1,112 @@
+name: Publikacja Webflow z przekierowaniami
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pobierz bieżący eksport Webflow
+        uses: actions/checkout@v6
+      - name: Przygotuj stronę i przekierowania z redirects.json
+        env:
+          SITE_OUTPUT: ${{ runner.temp }}/artrepublica-site
+        run: |
+          python3 - <<'PYTHON'
+          import html
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import shutil
+          import subprocess
+          from urllib.parse import urlsplit
+
+          root = Path.cwd().resolve()
+          output = Path(os.environ["SITE_OUTPUT"]).resolve()
+          if output == root or output in root.parents:
+              raise SystemExit("Katalog publikacji musi być oddzielony od źródeł")
+          if output.exists():
+              raise SystemExit("Katalog publikacji już istnieje")
+          config = json.loads((root / "redirects.json").read_text(encoding="utf-8"))
+          origin = config["origin"]
+          parsed = urlsplit(origin)
+          if parsed.scheme != "https" or not parsed.netloc or parsed.path or parsed.query or parsed.fragment or parsed.username or parsed.password:
+              raise SystemExit("Nieprawidłowa domena w redirects.json")
+          rules = config["redirects"]
+          if not isinstance(rules, dict) or not rules:
+              raise SystemExit("Brak listy przekierowań")
+          path_pattern = re.compile(r"/[A-Za-z0-9_/-]+\.html")
+          for source, target in rules.items():
+              if not isinstance(source, str) or not isinstance(target, str) or not path_pattern.fullmatch(source) or not path_pattern.fullmatch(target):
+                  raise SystemExit("Użyj ścieżek zaczynających się od / i kończących się .html")
+              if source == target or target in rules:
+                  raise SystemExit("Pętla lub łańcuch przekierowań")
+              if not (root / target.lstrip("/")).is_file():
+                  raise SystemExit("Brakuje strony docelowej: " + target)
+
+          output.mkdir(parents=True)
+          tracked = subprocess.check_output(["git", "ls-files", "-z"]).decode().split("\0")
+          for name in filter(None, tracked):
+              relative = Path(name)
+              if relative.parts[0] in {".git", ".github"} or relative.name == ".DS_Store" or name == "redirects.json":
+                  continue
+              source_file = root / relative
+              if source_file.is_symlink() or not source_file.resolve().is_relative_to(root):
+                  raise SystemExit("Niedozwolony dowiązany plik: " + name)
+              if not source_file.is_file():
+                  raise SystemExit("Brakuje pliku eksportu: " + name)
+              destination = output / relative
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(source_file, destination)
+
+          count = 0
+          for old, target in rules.items():
+              stem = old.lstrip("/")[:-5]
+              url = origin + target
+              escaped = html.escape(url, quote=True)
+              page = (
+                  '<!doctype html>\n<html lang="pl">\n<head>\n<meta charset="utf-8">\n'
+                  '<title>Strona została przeniesiona | ARTREPUBLICA</title>\n'
+                  '<link rel="canonical" href="' + escaped + '">\n'
+                  '<script>window.location.replace(' + json.dumps(url) + ' + window.location.search + window.location.hash);</script>\n'
+                  '<meta http-equiv="refresh" content="0; url=' + escaped + '">\n'
+                  '</head>\n<body><p>Strona została przeniesiona. <a href="' + escaped + '">Przejdź do aktualnej strony</a>.</p></body>\n</html>\n'
+              )
+              for name in (old.lstrip("/"), stem + "/index.html"):
+                  destination = output / name
+                  if destination.exists():
+                      raise SystemExit("Przekierowanie koliduje z plikiem Webflow: " + name)
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  destination.write_text(page, encoding="utf-8")
+                  count += 1
+          if not (output / "index.html").is_file():
+              raise SystemExit("Brak strony głównej")
+          print(f"Zachowano eksport Webflow i wygenerowano {count} plików przekierowań wyłącznie do publikacji.")
+          PYTHON
+      - name: Przygotuj GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Spakuj stronę do publikacji
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/artrepublica-site
+      - name: Opublikuj stronę
+        id: deployment
+        uses: actions/deploy-pages@v4

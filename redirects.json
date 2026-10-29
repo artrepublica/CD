@@ -1,0 +1,13 @@
+{
+  "origin": "https://studiodzwiekowe.artrepublica.pl",
+  "redirects": {
+    "/menu/projekty/nagraj-audiobook.html": "/menu/uslugi/nagraj-audiobook.html",
+    "/menu/projekty/nagraj-film.html": "/menu/uslugi/nagraj-film.html",
+    "/menu/projekty/mix-mastering.html": "/menu/uslugi/mix-mastering.html",
+    "/menu/projekty/cennik.html": "/cennik.html",
+    "/menu/projekty/bemowo.html": "/lokalizacje/bemowo.html",
+    "/menu/projekty/mazowieckie.html": "/lokalizacje/mazowieckie.html",
+    "/menu/lokalizacje/bemowo.html": "/lokalizacje/bemowo.html",
+    "/menu/lokalizacje/mazowieckie.html": "/lokalizacje/mazowieckie.html"
+  }
+}
