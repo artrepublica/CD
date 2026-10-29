@@ -135,7 +135,7 @@ a {
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   mix-blend-mode: normal;
-  background-color: #0095ffb3;
+  background-color: #0076cad9;
   background-image: none;
   background-size: auto;
   position: fixed;
@@ -998,7 +998,7 @@ a {
 .dropdown-list.w--open {
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
-  background-color: #0095ffb3;
+  background-color: #0267af;
   border-bottom-right-radius: 18px;
   border-bottom-left-radius: 18px;
   padding-left: 10px;
@@ -1402,7 +1402,7 @@ a {
   .nav-menu {
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background-color: #0095ffb3;
+    background-color: #006ab6f7;
     justify-content: space-around;
     margin-left: 0;
     padding-top: 10px;
