@@ -1075,6 +1075,12 @@ a {
   transform: none;
 }
 
+.hover-move.wspolpraca {
+  box-shadow: none;
+  background-image: none;
+  background-position: 0 0;
+}
+
 .link-txt {
   color: #fff;
   position: relative;
