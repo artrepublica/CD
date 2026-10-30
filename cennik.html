@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Thu Oct 29 2026 21:54:03 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Fri Oct 30 2026 19:15:10 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6ae346b4274ff3af2e80f05d" data-wf-site="62c1a7fde0c7f2552fd24825" lang="pl">
 <head>
   <meta charset="utf-8">
@@ -27,15 +27,7 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
   <link href="https://studiodzwiekowe.artrepublica.pl/menu/projekty/nagraj-audiobook.html" rel="canonical">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZL3XZ4PX87"></script>
-  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-ZL3XZ4PX87', {'anonymize_ip': false});</script>
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-12564831-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-12564831-1');
-  </script>
-  <!--  Google Tag Manager  -->
+  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-ZL3XZ4PX87', {'anonymize_ip': false});</script><!--  Google Tag Manager  -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -88,39 +80,941 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" data-doc-height="1" role="banner" class="navbar w-nav"></div>
   <a href="tel:+48501333581" class="zadzwon-teraz w-inline-block"><img src="images/iphone_white-01.svg" loading="lazy" alt="+48501333581" width="50" class="zadzwon"></a>
-  <div id="arkuszwydawniczy" class="_60">
-    <div class="container-8 w-container">
-      <div class="dzial">
-        <h2 class="dzialy">Strona i arkusz wydawniczy</h2>
-      </div>
-    </div>
-  </div>
-  <div class="w-embed"><!--  H1  -->
-    <div class="_60 podstrona">
+  <div class="w-embed w-script">
+    <style>
+  .ar-pricing {
+    --ar-panel: rgba(0, 149, 255, 0.70);
+    --ar-radius: 12px;
+    --ar-muted: #eef7ff;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.65;
+    padding: 0 20px 60px;
+    overflow-wrap: anywhere;
+  }
+  .ar-pricing,
+  .ar-pricing * {
+    box-sizing: border-box;
+  }
+  .ar-pricing-title .dzialy {
+    font-family: "Open Sans", sans-serif;
+  }
+  .ar-pricing-title .ar-title-br { display: none; }
+  @media (max-width: 560px) { .ar-pricing-title .ar-title-br { display: inline; } }
+  .ar-pricing__inner {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  .ar-pricing h2,
+  .ar-pricing h3 {
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  .ar-pricing h2 {
+    margin: 0 0 18px;
+    font-size: clamp(23px, 3vw, 30px);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .ar-pricing h3 {
+    margin: 24px 0 12px;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .ar-pricing p {
+    margin: 0 0 16px;
+  }
+  .ar-pricing p:last-child {
+    margin-bottom: 0;
+  }
+  .ar-pricing strong {
+    font-weight: 700;
+  }
+  .ar-pricing a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .ar-pricing a:focus-visible,
+  .ar-pricing button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 5px;
+  }
+  .ar-pricing__intro,
+  .ar-pricing__card {
+    background: var(--ar-panel);
+    border: 0;
+    border-radius: var(--ar-radius);
+    box-shadow: none;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+  }
+  .ar-pricing__intro {
+    padding: clamp(24px, 4vw, 36px);
+  }
+  .ar-pricing__lead {
+    font-size: clamp(18px, 2vw, 21px);
+    font-weight: 400;
+    line-height: 1.55;
+  }
+  .ar-pricing__card {
+    margin-top: 28px;
+    padding: clamp(20px, 4vw, 36px);
+    scroll-margin-top: 100px;
+  }
+  .ar-pricing__note {
+    color: var(--ar-muted);
+    font-size: 14px;
+  }
+  /* Nawigacja do pięciu kategorii */
+  .ar-pricing__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .ar-pricing__nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    max-width: 100%;
+    padding: 9px 14px;
+    border-radius: 8px;
+    background: rgba(0, 68, 119, 0.55);
+    font-size: 14px;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+  .ar-pricing__nav a:hover {
+    background: rgba(0, 54, 98, 0.85);
+  }
+  /* Tabele cen */
+  .ar-pricing__table-wrap {
+    width: 100%;
+    margin: 22px 0;
+    overflow-x: auto;
+  }
+  .ar-pricing table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .ar-pricing caption {
+    padding-bottom: 14px;
+    color: var(--ar-muted);
+    font-size: 14px;
+    text-align: left;
+  }
+  .ar-pricing th,
+  .ar-pricing td {
+    padding: 16px 12px;
+    border: 0;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+  }
+  .ar-pricing thead th {
+    color: var(--ar-muted);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .ar-pricing tbody th {
+    width: 66%;
+    font-weight: 400;
+  }
+  .ar-pricing tbody td {
+    width: 34%;
+    font-weight: 600;
+  }
+  .ar-pricing tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.09);
+  }
+  .ar-pricing small {
+    display: block;
+    margin-top: 5px;
+    color: var(--ar-muted);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .ar-pricing ul {
+    margin: 0 0 20px;
+    padding-left: 22px;
+  }
+  .ar-pricing li {
+    margin-bottom: 8px;
+  }
+  /* Kontakt */
+  .ar-pricing__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .ar-pricing__contact-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .ar-pricing .ar-pricing__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 8px;
+    color: #ffffff;
+    background: rgba(0, 68, 119, 0.72);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .ar-pricing .ar-pricing__button:hover {
+    background: rgba(0, 54, 98, 0.90);
+  }
+  .ar-pricing .ar-pricing__contact-link {
+    column-gap: 0.35em;
+    flex-wrap: wrap;
+  }
+  .ar-pricing .ar-pricing__button--copy {
+    flex-direction: column;
+    gap: 3px;
+    min-width: 56px;
+    padding: 8px 12px;
+    background: rgba(0, 68, 119, 0.46);
+    font-weight: 400;
+  }
+  .ar-pricing .ar-pricing__button--copy:hover {
+    background: rgba(0, 54, 98, 0.80);
+  }
+  .ar-pricing .ar-pricing__button[hidden] {
+    display: none;
+  }
+  .ar-pricing .ar-pricing__button:disabled {
+    cursor: wait;
+    opacity: 0.8;
+  }
+  .ar-pricing__copy-icon {
+    display: block;
+    width: 21px;
+    height: 21px;
+    flex: none;
+    pointer-events: none;
+  }
+  .ar-pricing__copy-label {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.2;
+    pointer-events: none;
+  }
+  .ar-pricing__copy-status {
+    min-height: 24px;
+    margin-top: 12px !important;
+    color: var(--ar-muted);
+    font-size: 14px;
+  }
+  /* Jednorazowe pojawianie się dalszych kart */
+  .ar-pricing .ar-reveal-pending {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  .ar-pricing .ar-reveal-enter {
+    animation: ar-pricing-reveal 500ms ease-out both;
+  }
+  @keyframes ar-pricing-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .ar-pricing .ar-reveal-pending:focus-within {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ar-pricing .ar-reveal-pending,
+    .ar-pricing .ar-reveal-enter {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+  @media (max-width: 600px) {
+    .ar-pricing {
+      padding: 0 12px 36px;
+    }
+    .ar-pricing th,
+    .ar-pricing td {
+      padding: 14px 7px;
+    }
+    .ar-pricing tbody th {
+      width: 60%;
+    }
+    .ar-pricing tbody td {
+      width: 40%;
+    }
+    .ar-pricing__contacts {
+      flex-direction: column;
+    }
+    .ar-pricing__contact-group {
+      width: 100%;
+    }
+    .ar-pricing__contact-group > a {
+      flex: 1 1 200px;
+    }
+    .ar-pricing__contact-group > button {
+      flex: 0 0 auto;
+    }
+  }
+@media (max-width: 560px) { ._60.podstrona.ar-pricing-title { margin-top: 140px; } } @media (max-width: 478px) { ._60.podstrona.ar-pricing-title { margin-top: 110px; } }</style>
+    <!--  H1: oryginalna zakładka z projektu Webflow  -->
+    <div class="_60 podstrona ar-pricing-title">
       <div class="container-8 w-container">
         <div class="dzial">
-          <h1 class="dzialy">Studio nagraniowe w Warszawie – cennik</h1>
+          <h1 class="dzialy">
+            Studio nagraniowe w <br class="ar-title-br">Warszawie – cennik
+          </h1>
         </div>
       </div>
     </div>
-    <!--  CAŁY TEKST W JEDNYM BOXIE  -->
-    <div class="section-2 dark">
-      <div class="container-6 w-container">
-        <div class="audiobooki">
-          <div class="div_grid">
-            <p class="txt white hp">Przejrzyste warunki współpracy stanowią dla mnie podstawę budowania trwałych relacji z każdym Klientem. Moje studio nagraniowe w Warszawie zaprasza do zapoznania się z cennikiem, który elastycznie dopasowuję do specyfiki każdego projektu. Ostateczny koszt usług zależy od stopnia skomplikowania opowieści, liczby ścieżek oraz przewidywanego czasu pracy w przestrzeni studyjnej.</p>
-            <h2 class="txt white" style="font-size:26px;font-weight:600;line-height:1.3;margin:48px 0 16px;">Profesjonalna produkcja muzyczna i miksowanie dźwięku</h2>
-            <p class="txt white hp">Praca nad materiałem muzycznym opiera się na wyjątkowej precyzji oraz indywidualnym podejściu do każdego utworu. Oferowana przeze mnie kompleksowa produkcja muzyczna w cenniku obejmuje zarówno sesje nagraniowe w studiu, jak i późniejszą obróbkę brzmieniową ścieżek. W ramach realizacji dbam o profesjonalny mix i mastering, dopasowując styl pracy do liczby ścieżek oraz charakteru kompozycji. Na koniec Klienci otrzymują ode mnie w pełni dopracowany nagraniowo utwór, który spełnia najwyższe standardy rynkowe.</p>
-            <h2 class="txt white" style="font-size:26px;font-weight:600;line-height:1.3;margin:48px 0 16px;">Realizacja nagrań lektorskich, podcastów i audiobooków</h2>
-            <p class="txt white hp">Moje studio nagrań oferuje cennik uzależniony od czasu trwania sesji oraz przeznaczenia gotowego materiału. Doskonale wiem, że nagrywanie czystego głosu wymaga odpowiednich warunków akustycznych oraz pełnego skupienia realizatora. Elastycznie rozliczam zarówno krótkie nagrania lektorskie do spotów reklamowych, jak i wielogodzinne prace nad audiobookami czy słuchowiskami. Sprawuję profesjonalną opiekę nad całym procesem rejestracji audio, co gwarantuje naturalne brzmienie i komfort rozmówców.</p>
-            <h2 class="txt white" style="font-size:26px;font-weight:600;line-height:1.3;margin:48px 0 16px;">Udźwiękowienie filmów, wydarzeń i sesje plenerowe</h2>
-            <p class="txt white hp">Specjalistyczne projekty dźwiękowe wymagają nieszablonowych rozwiązań oraz precyzyjnie dobranych narzędzi. Realizuję oprawę audio do spektakli teatralnych, konferencji biznesowych oraz zaawansowanych form filmowych. W zakres moich usług wchodzi także profesjonalna restauracja nagrań, czyli skuteczne usuwanie niepożądanych szumów i zakłóceń z dostarczonych ścieżek. Każde nietypowe zlecenie poddaję szczegółowej analizie, aby zaproponować warunki idealnie dopasowane do skali realizowanego przedsięwzięcia.</p>
-            <h2 class="txt white" style="font-size:26px;font-weight:600;line-height:1.3;margin:48px 0 16px;">Cena produkcji muzycznej w Warszawie – zapraszam do kontaktu</h2>
-            <p class="txt white hp">Precyzyjne oszacowanie kosztów usługi wymaga wcześniejszego poznania oczekiwań Klienta oraz skali planowanego projektu. Całkowita cena produkcji muzycznej w Warszawie zależy od zakresu wymaganych prac, wykorzystanego sprzętu oraz przewidywanego czasu realizacji. Zachęcam do bezpośredniego kontaktu, podczas którego omówimy szczegóły i przygotuję dla Ciebie bezpłatną wycenę. Wspólnie wybierzemy rozwiązanie, które idealnie wpisze się w Twoje założenia budżetowe oraz artystyczne.</p>
+    <div class="ar-pricing">
+      <div class="ar-pricing__inner">
+        <!--  WSTĘP  -->
+        <div class="ar-pricing__intro">
+          <p class="ar-pricing__lead">
+            Nagrania głosu i instrumentów, produkcja muzyczna,
+            miks i mastering oraz dźwięk do audiobooków,
+            filmów, spektakli i materiałów firmowych.
+          </p>
+          <p>
+            Studio nagrań ARTREPUBLICA w Warszawie współpracuje
+            z autorami i wydawnictwami, teatrami i instytucjami
+            kultury, muzykami, twórcami audiowizualnymi oraz firmami
+            i organizacjami. Możesz powierzyć mi cały projekt
+            lub wybrany etap pracy.
+          </p>
+          <p>
+            Cennik obejmuje sesje nagraniowe, produkcję audiobooków,
+            miks i mastering oraz opracowanie dźwięku do filmów
+            i spektakli. Wybierz kategorię odpowiadającą Twojemu
+            projektowi, aby sprawdzić ceny i zakres usług.
+          </p>
+          <p>
+            Dokładny koszt i termin ustalamy przed rozpoczęciem
+            realizacji. <strong>Wszystkie podane kwoty są brutto.</strong>
+          </p>
+          <nav class="ar-pricing__nav" aria-label="Kategorie cennika">
+            <a href="#ar-autorzy">Autorzy i wydawnictwa</a>
+            <a href="#ar-teatry">Teatry i instytucje kultury</a>
+            <a href="#ar-muzycy">Muzycy i zespoły</a>
+            <a href="#ar-film">Producenci i twórcy audiowizualni</a>
+            <a href="#ar-firmy">Firmy i organizacje</a>
+          </nav>
+        </div>
+        <!--  H2: AUTORZY I WYDAWNICTWA  -->
+        <section class="ar-pricing__card" id="ar-autorzy" aria-labelledby="ar-autorzy-title">
+          <h2 id="ar-autorzy-title">Autorzy i wydawnictwa</h2>
+          <p>
+            Nagranie audiobooka od sesji z lektorem
+            po gotowe pliki do publikacji. Pracuję z głosem,
+            interpretacją i brzmieniem, korzystając z doświadczenia
+            zdobytego między innymi przy realizacjach
+            dla Wolnych Lektur.
+          </p>
+          <div class="ar-pricing__table-wrap">
+            <table>
+              <caption>
+                Cennik realizacji audiobooków — kwoty brutto
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Usługa</th>
+                  <th scope="col">Cena</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Realizacja audiobooka
+                    <small>
+                      Nagranie, dogrywki, postprodukcja i mastering
+                    </small>
+                  </th>
+                  <td>
+                    850–1200 zł / arkusz
+                    <small>Orientacyjnie</small>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Honorarium lektora
+                    <small>
+                      Osobno od kosztu realizacji studyjnej
+                    </small>
+                  </th>
+                  <td>
+                    350–400 zł / arkusz
+                    <small>
+                      Orientacyjnie; do potwierdzenia
+                      przy wyborze osoby
+                    </small>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Odsłuch korektorski</th>
+                  <td>Wycena indywidualna</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
+          <h3>Co obejmuje realizacja audiobooka?</h3>
+          <ul>
+            <li>
+              Studio, sprzęt i pracę realizatora podczas sesji.
+            </li>
+            <li>
+              Przygotowanie plików do odsłuchu korektorskiego.
+            </li>
+            <li>
+              Sesję dogrywek według otrzymanej listy poprawek
+              oraz ich montaż.
+            </li>
+            <li>
+              Postprodukcję głosu, opracowanie barwy i dynamiki,
+              redukcję sybilantów oraz mastering.
+            </li>
+            <li>Przekazanie gotowych plików WAV.</li>
+          </ul>
+          <p>
+            Cena zależy od trudności tekstu, zakresu interpretacji
+            i przewidywanego czasu sesji oraz dogrywek.
+            Wycenę przygotowuję po zapoznaniu się z tekstem
+            i próbką czytania.
+          </p>
+          <p>
+            Honorarium lektora potwierdzamy indywidualnie.
+            Podany przedział nie obejmuje każdej osoby.
+            Możesz również zorganizować udział własnego lektora.
+          </p>
+          <p>
+            Odsłuch korektorski to porównanie nagrania z tekstem
+            i przygotowanie listy poprawek. Może go zapewnić
+            zamawiający lub możemy zorganizować go jako dodatkową
+            usługę. Nagranie i montaż dogrywek według tej listy
+            są uwzględnione w cenie realizacji studyjnej.
+          </p>
+          <p class="ar-pricing__note">
+            Arkusz wydawniczy tekstu prozatorskiego to 40 000 znaków
+            ze spacjami. Nie odpowiada stałej długości nagrania.
+          </p>
+        </section>
+        <!--  H2: TEATRY I INSTYTUCJE KULTURY  -->
+        <section class="ar-pricing__card" id="ar-teatry" aria-labelledby="ar-teatry-title" data-ar-reveal="">
+          <h2 id="ar-teatry-title">Teatry i instytucje kultury</h2>
+          <p>
+            Nagrania głosów i instrumentów oraz opracowanie
+            materiałów audio do spektakli i projektów kulturalnych.
+            Montaż i układ dźwięku dopasowuję do scenariusza,
+            rytmu przedstawienia i sposobu wykorzystania materiału.
+          </p>
+          <div class="ar-pricing__table-wrap">
+            <table>
+              <caption>
+                Dźwięk do produkcji scenicznych — kwoty brutto
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Usługa</th>
+                  <th scope="col">Cena</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Sesja nagraniowa w studiu z realizatorem
+                  </th>
+                  <td>350 zł / godz.</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Opracowanie dźwięku do spektaklu
+                    <small>
+                      Montaż głosów, muzyki i efektów
+                      według założeń projektu
+                    </small>
+                  </th>
+                  <td>Wycena indywidualna</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Do wyceny potrzebne są założenia spektaklu,
+            ilość i stan materiału, zakres nowych nagrań
+            oraz sposób przygotowania dźwięku do odtwarzania.
+            Koszt ustalamy przed rozpoczęciem pracy.
+          </p>
+          <p class="ar-pricing__note">
+            Honoraria wykonawców i ewentualne koszty licencji
+            ustalamy osobno, zależnie od projektu.
+          </p>
+        </section>
+        <!--  H2: MUZYCY I ZESPOŁY  -->
+        <section class="ar-pricing__card" id="ar-muzycy" aria-labelledby="ar-muzycy-title" data-ar-reveal="">
+          <h2 id="ar-muzycy-title">Muzycy i zespoły</h2>
+          <p>
+            Nagrania wokalne i instrumentalne, miks oraz mastering.
+            Możesz nagrać materiał w studiu lub dostarczyć
+            własne ślady do opracowania.
+          </p>
+          <h3>
+            Produkcja muzyczna w Warszawie — cennik i zakres usług
+          </h3>
+          <p>
+            Cena produkcji muzycznej zależy od tego, czy potrzebujesz
+            nagrania w studiu, miksu dostarczonych śladów,
+            masteringu czy kilku etapów realizacji.
+            Poniżej znajdziesz stawki za poszczególne usługi.
+            Przy wycenie uwzględniam liczbę i przygotowanie śladów,
+            długość utworu oraz zakres dodatkowej edycji.
+          </p>
+          <div class="ar-pricing__table-wrap">
+            <table>
+              <caption>
+                Nagrania, miks i mastering — kwoty brutto
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Usługa</th>
+                  <th scope="col">Cena</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Nagranie w studiu z realizatorem
+                  </th>
+                  <td>350 zł / godz.</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Miks jednego wokalu z gotowym podkładem stereo
+                  </th>
+                  <td>Od 350 zł / utwór</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Miks wielośladowy
+                    <small>
+                      Do 24 przygotowanych śladów,
+                      utwór do 5 minut
+                    </small>
+                  </th>
+                  <td>Od 1500 zł / utwór</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Mastering stereo
+                    <small>
+                      Jeden gotowy miks stereo,
+                      utwór do 5 minut
+                    </small>
+                  </th>
+                  <td>Od 350 zł / utwór</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Stem mastering
+                    <small>
+                      Do 6 przygotowanych grup,
+                      utwór do 5 minut
+                    </small>
+                  </th>
+                  <td>Od 600 zł / utwór</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <strong>Miks wokalu z podkładem</strong>
+            obejmuje obróbkę jednego dostarczonego wokalu
+            i połączenie go z gotowym plikiem stereo:
+            dopasowanie barwy, dynamiki, głośności i przestrzeni.
+            Nagranie wokalu, strojenie, wybór ujęć,
+            rozbudowana edycja i mastering są osobnymi usługami.
+          </p>
+          <p>
+            <strong>Miks wielośladowy</strong>
+            obejmuje proporcje instrumentów i wokali, barwę,
+            dynamikę oraz przestrzeń. Ślady powinny być już wybrane,
+            wyczyszczone i przygotowane do miksowania.
+            Cena nie obejmuje nagrania, wybierania ujęć,
+            czyszczenia, strojenia, rozbudowanej edycji rytmicznej
+            ani masteringu.
+          </p>
+          <p>
+            <strong>Mastering stereo</strong>
+            to końcowe opracowanie gotowego miksu:
+            korekcja brzmienia, kontrola dynamiki i głośności
+            oraz przygotowanie pliku WAV.
+          </p>
+          <p>
+            <strong>Stem mastering</strong>
+            pozwala dodatkowo opracować oddzielne grupy,
+            na przykład perkusję, bas, gitary i wokale,
+            oraz skorygować ich proporcje.
+            Większa przebudowa miksu wymaga osobnej wyceny.
+          </p>
+          <p class="ar-pricing__note">
+            Dłuższe utwory, większe sesje i dodatkową edycję
+            wyceniam po zapoznaniu się z materiałem.
+          </p>
+        </section>
+        <!--  H2: PRODUCENCI I TWÓRCY AUDIOWIZUALNI  -->
+        <section class="ar-pricing__card" id="ar-film" aria-labelledby="ar-film-title" data-ar-reveal="">
+          <h2 id="ar-film-title">
+            Producenci i twórcy audiowizualni
+          </h2>
+          <p>
+            Nagrania lektorskie i postprodukcja dźwięku do filmów.
+            Przygotowuję głos, dialogi i końcowe zgranie
+            materiałów audio z muzyką oraz efektami.
+          </p>
+          <div class="ar-pricing__table-wrap">
+            <table>
+              <caption>
+                Nagrania i dźwięk do filmu — kwoty brutto
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Usługa</th>
+                  <th scope="col">Cena</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Nagranie głosu w studiu z realizatorem
+                    <small>Bez honorarium lektora</small>
+                  </th>
+                  <td>350 zł / godz.</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Postprodukcja dźwięku do filmu
+                  </th>
+                  <td>350 zł / godz. pracy</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Postprodukcja może obejmować czyszczenie i obróbkę
+            dialogów, wyrównanie ich głośności oraz ustawienie
+            proporcji między głosem, muzyką i efektami.
+            Przewidywany czas i koszt ustalam po obejrzeniu
+            materiału i omówieniu zakresu.
+          </p>
+          <p class="ar-pricing__note">
+            Podane stawki dotyczą pracy nad dźwiękiem.
+            Honorarium lektora ustalamy osobno.
+          </p>
+        </section>
+        <!--  H2: FIRMY I ORGANIZACJE  -->
+        <section class="ar-pricing__card" id="ar-firmy" aria-labelledby="ar-firmy-title" data-ar-reveal="">
+          <h2 id="ar-firmy-title">Firmy i organizacje</h2>
+          <p>
+            Nagrania głosowe i materiały audio na potrzeby
+            komunikacji: narracje do prezentacji i filmów,
+            podcasty, wywiady oraz treści informacyjne.
+            Zakres przygotowania dopasowujemy do miejsca
+            i sposobu publikacji.
+          </p>
+          <div class="ar-pricing__table-wrap">
+            <table>
+              <caption>
+                Nagrania dla firm i organizacji — kwoty brutto
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Usługa</th>
+                  <th scope="col">Cena</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    Sesja nagraniowa w studiu z realizatorem
+                    <small>
+                      Nagranie głosu, rozmowy lub podcastu
+                    </small>
+                  </th>
+                  <td>350 zł / godz.</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Montaż, obróbka i przygotowanie materiału
+                    do publikacji
+                  </th>
+                  <td>Wycena indywidualna</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Sesja obejmuje studio, sprzęt i realizację nagrania.
+            Montaż, czyszczenie, finalizację brzmienia oraz
+            dodatkowe wersje materiału ustalamy przed rozpoczęciem
+            pracy. Honorarium lektora, jeśli bierze udział
+            w projekcie, jest osobnym kosztem.
+          </p>
+        </section>
+        <!--  H2: WSPÓLNE ZASADY  -->
+        <section class="ar-pricing__card" aria-labelledby="ar-pricing-terms" data-ar-reveal="">
+          <h2 id="ar-pricing-terms">
+            Wycena, poprawki i terminy
+          </h2>
+          <p>
+            Na cenę wpływają zakres pracy, ilość i stan
+            dostarczonego materiału oraz oczekiwany rezultat.
+            Przed rozpoczęciem ustalamy, co obejmuje realizacja
+            i jakie pliki otrzymasz.
+          </p>
+          <p>
+            Cena miksu i masteringu obejmuje konsultację brzmienia
+            oraz poprawki w uzgodnionym zakresie.
+            Ich zakres i liczbę ustalamy przed rozpoczęciem
+            współpracy. Zmiany wykraczające poza ustalenia
+            wyceniamy osobno.
+          </p>
+          <p>
+            Termin zależy od zakresu projektu i dostępności studia.
+            Uzgadniamy go przed rozpoczęciem pracy.
+            Pilne realizacje ustalamy indywidualnie.
+          </p>
+        </section>
+        <!--  H2: KONTAKT  -->
+        <section class="ar-pricing__card" aria-labelledby="ar-pricing-contact" data-ar-reveal="">
+          <h2 id="ar-pricing-contact">
+            Zapytaj o wycenę swojego projektu
+          </h2>
+          <p>
+            Opisz projekt i prześlij fragment tekstu lub nagrania.
+            Podaj ilość materiału, oczekiwany termin oraz etapy
+            pracy, które chcesz mi powierzyć.
+          </p>
+          <p>
+            Jeśli masz określony budżet, również o nim napisz.
+            Pozwoli to zaproponować odpowiedni zakres współpracy.
+          </p>
+          <div class="ar-pricing__contacts">
+            <div class="ar-pricing__contact-group">
+              <a class="ar-pricing__button ar-pricing__contact-link" href="mailto:rafal@artrepublica.pl">
+                <span>Napisz:</span>
+                <span data-ar-contact-value="">
+                  rafal@artrepublica.pl
+                </span>
+              </a>
+              <button class="ar-pricing__button ar-pricing__button--copy" type="button" data-ar-copy="rafal@artrepublica.pl" data-ar-label="adres e-mail" aria-label="Skopiuj adres e-mail" hidden="">
+                <svg class="ar-pricing__copy-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M8 7V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-3"></path>
+                  <rect x="4" y="7" width="12" height="14" rx="1.5"></rect>
+                </svg>
+                <span class="ar-pricing__copy-label">kopiuj</span>
+              </button>
+            </div>
+            <div class="ar-pricing__contact-group">
+              <a class="ar-pricing__button ar-pricing__contact-link" href="tel:+48501333581">
+                <span>Zadzwoń:</span>
+                <span data-ar-contact-value="">
+                  +48 501 333 581
+                </span>
+              </a>
+              <button class="ar-pricing__button ar-pricing__button--copy" type="button" data-ar-copy="+48501333581" data-ar-label="numer telefonu" aria-label="Skopiuj numer telefonu" hidden="">
+                <svg class="ar-pricing__copy-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M8 7V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-3"></path>
+                  <rect x="4" y="7" width="12" height="14" rx="1.5"></rect>
+                </svg>
+                <span class="ar-pricing__copy-label">kopiuj</span>
+              </button>
+            </div>
+          </div>
+          <p class="ar-pricing__copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        </section>
       </div>
     </div>
+    <script>
+(function () {
+  function initPricing() {
+    document.querySelectorAll(".ar-pricing").forEach(function (root) {
+      if (root.dataset.arInitialized === "true") return;
+      root.dataset.arInitialized = "true";
+      /* Kopiowanie danych kontaktowych */
+      var status = root.querySelector(".ar-pricing__copy-status");
+      root.querySelectorAll("[data-ar-copy]").forEach(function (button) {
+        var caption = button.querySelector(".ar-pricing__copy-label");
+        var resetTimer;
+        button.hidden = false;
+        button.addEventListener("click", async function () {
+          var value = button.getAttribute("data-ar-copy");
+          var label = button.getAttribute("data-ar-label");
+          window.clearTimeout(resetTimer);
+          button.disabled = true;
+          caption.textContent = "kopiuj";
+          status.textContent = "";
+          try {
+            if (!navigator.clipboard || !window.isSecureContext) {
+              throw new Error("Clipboard unavailable");
+            }
+            await navigator.clipboard.writeText(value);
+            caption.textContent = "skopiowano";
+            status.textContent =
+              "Skopiowano " + label + ": " + value;
+          } catch (error) {
+            var text = button.parentElement.querySelector(
+              "[data-ar-contact-value]"
+            );
+            var selection = window.getSelection();
+            if (text && selection) {
+              var range = document.createRange();
+              range.selectNodeContents(text);
+              selection.removeAllRanges();
+              selection.addRange(range);
+              status.textContent =
+                "Zaznaczono " + label +
+                ". Użyj opcji Kopiuj lub skrótu ⌘C / Ctrl+C.";
+            } else {
+              status.textContent =
+                "Skopiuj ręcznie " + label + ": " + value;
+            }
+          } finally {
+            button.disabled = false;
+            resetTimer = window.setTimeout(function () {
+              caption.textContent = "kopiuj";
+            }, 1800);
+          }
+        });
+      });
+      /* Jednorazowe pojawienie się dalszych kart */
+      if (!("IntersectionObserver" in window)) return;
+      var motionPreference = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
+      if (motionPreference.matches) return;
+      var cards = Array.from(
+        root.querySelectorAll("[data-ar-reveal]")
+      );
+      var observer;
+      function showCard(card, animate) {
+        card.classList.remove("ar-reveal-pending");
+        if (animate) {
+          card.classList.add("ar-reveal-enter");
+        }
+        if (observer) {
+          observer.unobserve(card);
+        }
+      }
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            showCard(entry.target, true);
+          }
+        });
+      }, {
+        threshold: 0,
+        rootMargin: "0px"
+      });
+      cards.forEach(function (card) {
+        if (card.getBoundingClientRect().top < window.innerHeight) {
+          return;
+        }
+        card.classList.add("ar-reveal-pending");
+        observer.observe(card);
+      });
+      root.addEventListener("animationend", function (event) {
+        if (event.animationName === "ar-pricing-reveal") {
+          event.target.classList.remove("ar-reveal-enter");
+        }
+      });
+      root.addEventListener("focusin", function (event) {
+        var card = event.target.closest("[data-ar-reveal]");
+        if (card) {
+          showCard(card, false);
+        }
+      });
+      /* Odsłonięcie kategorii wybranej z nawigacji */
+      root.querySelectorAll(".ar-pricing__nav a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          var target = root.querySelector(
+            link.getAttribute("href")
+          );
+          if (target) {
+            showCard(target, false);
+          }
+        });
+      });
+      function revealAll() {
+        observer.disconnect();
+        cards.forEach(function (card) {
+          card.classList.remove(
+            "ar-reveal-pending",
+            "ar-reveal-enter"
+          );
+        });
+      }
+      if (motionPreference.addEventListener) {
+        motionPreference.addEventListener("change", function (event) {
+          if (event.matches) {
+            revealAll();
+          }
+        });
+      }
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+          revealAll();
+        }
+      });
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPricing, {
+      once: true
+    });
+  } else {
+    initPricing();
+  }
+})();
+</script>
   </div>
   <div class="section_stopka">
     <div class="w-container">

@@ -384,7 +384,7 @@ a {
 }
 
 ._60.podstrona {
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
 ._60.podstrona.mlims-skrzypce {
@@ -887,7 +887,7 @@ a {
 
 .bloure {
   z-index: -2147483648;
-  background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.jpg');
+  background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.webp');
   background-position: 0 0;
   background-size: cover;
   position: fixed;
@@ -1971,6 +1971,10 @@ a {
 
   .ar {
     display: none;
+  }
+
+  ._60.podstrona {
+    margin-top: 88px;
   }
 
   .paragraph-5, .paragraph-8 {
