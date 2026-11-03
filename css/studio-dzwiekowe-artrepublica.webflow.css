@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: Open Sans;
+  font-family: Open Sans Local;
   src: url('../fonts/OpenSans-Light.woff2') format("woff2");
   font-weight: 300;
   font-style: normal;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: Open Sans;
+  font-family: Open Sans Local;
   src: url('../fonts/OpenSans-SemiBold.woff2') format("woff2");
   font-weight: 600;
   font-style: normal;
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: Open Sans;
+  font-family: Open Sans Local;
   src: url('../fonts/OpenSans-Regular.woff2') format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-family: Open Sans;
+  font-family: Open Sans Local;
   src: url('../fonts/OpenSans-Bold.woff2') format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -112,7 +112,7 @@
 
 body {
   color: var(--white);
-  font-family: Open Sans, Tahoma, sans-serif;
+  font-family: Open Sans, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -130,6 +130,7 @@ a {
   background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.webp');
   background-position: 0 0;
   background-size: auto;
+  font-family: Open Sans Local, sans-serif;
   font-weight: 400;
 }
 
@@ -178,7 +179,7 @@ a {
   text-transform: uppercase;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: Open Sans, Tahoma, sans-serif;
+  font-family: Open Sans Local, sans-serif;
   font-size: 13px;
   font-weight: 600;
   transition: transform .2s, opacity .2s;
@@ -1010,7 +1011,7 @@ a {
   text-transform: uppercase;
   padding-left: 10px;
   padding-right: 30px;
-  font-family: Open Sans, Tahoma, sans-serif;
+  font-family: Open Sans Local, sans-serif;
   font-size: 13px;
   font-weight: 600;
   transition: transform .2s, opacity .2s;
@@ -2192,28 +2193,28 @@ a {
   font-display: swap;
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans Local';
   src: url('../fonts/OpenSans-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans Local';
   src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans Local';
   src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans Local';
   src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
