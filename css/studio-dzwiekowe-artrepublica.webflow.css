@@ -1840,6 +1840,10 @@ a {
     max-height: 280px;
   }
 
+  .dropdown-toggle {
+    font-size: 20px;
+  }
+
   .dropdown-list.w--open {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
