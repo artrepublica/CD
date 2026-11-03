@@ -95,6 +95,9 @@ a {
   background-color: var(--black);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
+  background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.webp');
+  background-position: 0 0;
+  background-size: auto;
   font-weight: 400;
 }
 
