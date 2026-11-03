@@ -1399,6 +1399,14 @@ a {
   background-color: #0095ffb3;
 }
 
+.link-4 {
+  color: var(--white);
+  text-underline-offset: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     font-size: 18px;
