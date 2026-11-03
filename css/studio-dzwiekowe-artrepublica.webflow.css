@@ -92,6 +92,7 @@ a {
 }
 
 .body {
+  background-color: var(--black);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
   font-weight: 400;
