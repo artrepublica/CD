@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Nov 03 2026 10:39:22 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Nov 03 2026 10:48:22 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="63db7a3824c0a64febcb178e" data-wf-site="62c1a7fde0c7f2552fd24825" lang="pl">
 <head>
   <meta charset="utf-8">
@@ -346,16 +346,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     </button>
                   </div>
                   <script>
-document.addEventListener('click',function(e){
-  var b=e.target.closest('.ar-vimeo-btn');
-  if(!b)return;
-  var f=document.createElement('iframe');
-  f.src='https://player.vimeo.com/video/'+b.dataset.vimeo+'?dnt=1&app_id=122963'+(matchMedia('(pointer:coarse)').matches?'':'&autoplay=1');
-  f.title=b.dataset.title;
-  f.allow='autoplay; fullscreen; picture-in-picture';
-  f.allowFullscreen=true;
-  b.replaceWith(f);
-});
+(function(){
+  function load(b,autoplay){
+    var f=document.createElement('iframe');
+    f.src='https://player.vimeo.com/video/'+b.dataset.vimeo+'?dnt=1&app_id=122963'+(autoplay?'&autoplay=1':'');
+    f.title=b.dataset.title;
+    f.allow='autoplay; fullscreen; picture-in-picture';
+    f.allowFullscreen=true;
+    b.replaceWith(f);
+  }
+  var touch=matchMedia('(pointer:coarse)').matches;
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.ar-vimeo-btn');
+    if(b)load(b,!touch);
+  });
+  if(touch){
+    var prepare=function(){
+      document.querySelectorAll('.ar-vimeo-btn').forEach(function(b){
+        if(b.offsetParent!==null)load(b,false);
+      });
+    };
+    ['touchstart','keydown'].forEach(function(t){
+      document.addEventListener(t,prepare,{once:true,passive:true});
+    });
+  }
+})();
 </script>
                 </div>
                 <a href="https://wolnelektury.pl/katalog/lektura/doyle-studium-w-szkarlacie/" target="_blank" class="link-video w-inline-block">
