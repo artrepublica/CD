@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Nov 03 2026 11:56:18 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Tue Nov 03 2026 12:35:44 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="63db7a3824c0a6029bcb1797" data-wf-site="62c1a7fde0c7f2552fd24825" lang="pl">
 <head>
   <meta charset="utf-8">
@@ -36,7 +36,7 @@
       "@id": "https://studiodzwiekowe.artrepublica.pl/menu/uslugi/nagraj-audiobook.html#service",
       "name": "Nagrywanie audiobooków",
       "serviceType": "Nagrywanie i produkcja audiobooków",
-      "description": "Kompleksowa produkcja audiobooków w Studio Dźwiękowym ARTREPUBLICA w Warszawie: przygotowanie okładki, nagranie lektorskie, montaż dźwięku i mastering. Pliki gotowe do publikacji cyfrowej, na życzenie także materiał do wytłoczenia na płycie CD.",
+      "description": "Produkcja audiobooków w Studio Dźwiękowym ARTREPUBLICA: nagranie lektorskie, montaż dźwięku i mastering, a opcjonalnie także projekt okładki. Pliki gotowe do publikacji cyfrowej, na życzenie także materiał do wytłoczenia na płycie CD.",
       "url": "https://studiodzwiekowe.artrepublica.pl/menu/uslugi/nagraj-audiobook.html",
       "provider": {
         "@type": "LocalBusiness",
@@ -198,15 +198,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div class="video-4 size">
                 <div class="w-embed w-script">
                   <style>
-.ar-vimeo-pion{display:none}
-@media (max-width:479px){.ar-vimeo-poziom{display:none}.ar-vimeo-pion{display:block}}
 .ar-vimeo-btn{position:absolute;top:0;left:0;width:100%;height:100%;padding:0;margin:0;border:0;background:#000;cursor:pointer;overflow:hidden}
 .ar-vimeo-btn img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.9;transition:opacity .2s}
 .ar-vimeo-btn:hover img,.ar-vimeo-btn:focus-visible img{opacity:1}
 .ar-vimeo-btn svg{position:absolute;top:50%;left:50%;width:72px;height:72px;margin:-36px 0 0 -36px}
 .ar-vimeo-btn:focus-visible{outline:3px solid #fff;outline-offset:-3px}
 </style>
-                  <div class="ar-vimeo-poziom w-video" style="padding-top:56.27659574468085%">
+                  <div class="video_poziom w-video" style="padding-top:56.27659574468085%">
                     <button type="button" class="ar-vimeo-btn" data-vimeo="897136347" data-title="Arthur Conan Doyle – Studium w szkarłacie, czyta Robert Koszucki" aria-label="Odtwórz film: Arthur Conan Doyle – Studium w szkarłacie, czyta Robert Koszucki">
                       <img src="https://i.vimeocdn.com/video/1772786626-5ba0da79bd5322bd1c35a7b21136af4fd9858353f500afb303e8671aa690ab54-d_960" width="960" height="540" loading="lazy" alt="">
                       <svg viewbox="0 0 72 72" aria-hidden="true">
@@ -215,7 +213,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       </svg>
                     </button>
                   </div>
-                  <div class="ar-vimeo-pion w-video" style="padding-top:177.76595744680853%">
+                  <div class="video_pion w-video" style="padding-top:177.76595744680853%">
                     <button type="button" class="ar-vimeo-btn" data-vimeo="897139625" data-title="Arthur Conan Doyle – Studium w szkarłacie, czyta Robert Koszucki" aria-label="Odtwórz film: Arthur Conan Doyle – Studium w szkarłacie, czyta Robert Koszucki">
                       <img src="https://i.vimeocdn.com/video/1772787890-a08ea8ad3155e6c29d1d3cb432506abc2b38bccc680eba9f723bb83590a10b1c-d_640" width="640" height="1138" loading="lazy" alt="">
                       <svg viewbox="0 0 72 72" aria-hidden="true">
@@ -226,6 +224,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   </div>
                   <script>
 (function(){
+  if(window.arVimeoReady)return;
+  window.arVimeoReady=true;
   function load(b,autoplay){
     var f=document.createElement('iframe');
     f.src='https://player.vimeo.com/video/'+b.dataset.vimeo+'?dnt=1&app_id=122963'+(autoplay?'&autoplay=1':'');
@@ -239,25 +239,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     var b=e.target.closest('.ar-vimeo-btn');
     if(b)load(b,!touch);
   });
-  if(touch){
-    var prepare=function(){
-      document.querySelectorAll('.ar-vimeo-btn').forEach(function(b){
-        if(b.offsetParent!==null)load(b,false);
-      });
-    };
-    ['touchstart','keydown'].forEach(function(t){
-      document.addEventListener(t,prepare,{once:true,passive:true});
-    });
-    if('IntersectionObserver' in window){
+  if(touch&&'IntersectionObserver' in window){
+    document.addEventListener('DOMContentLoaded',function(){
       var io=new IntersectionObserver(function(entries){
         entries.forEach(function(x){
-          if(x.isIntersecting){io.disconnect();prepare();}
+          if(x.isIntersecting){io.unobserve(x.target);load(x.target,false);}
         });
-      });
-      document.querySelectorAll('.ar-vimeo-btn').forEach(function(b){
-        if(b.offsetParent!==null)io.observe(b);
-      });
-    }
+      },{rootMargin:'400px 0px'});
+      document.querySelectorAll('.ar-vimeo-btn').forEach(function(b){io.observe(b);});
+    });
   }
 })();
 </script>
