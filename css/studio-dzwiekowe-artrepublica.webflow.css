@@ -1160,7 +1160,7 @@ a {
 }
 
 .sprzet {
-  background-image: linear-gradient(#331a0d33, #331a0d33), url('../images/Sound_Studio_ARTREPUBLICA_2560x1707px_A.webp');
+  background-image: linear-gradient(#331a0d33, #331a0d33), url('../images/Sound_Studio_sprzet_1920.webp');
   background-position: 0 0, 0 0;
   background-repeat: repeat, repeat-y;
   background-size: auto, cover;
@@ -1588,7 +1588,7 @@ a {
   }
 
   .sprzet {
-    background-image: linear-gradient(#0000, #0000), url('../images/Sound_Studio_ARTREPUBLICA_2560x1707px_A.webp');
+    background-image: linear-gradient(#0000, #0000), url('../images/Sound_Studio_sprzet_1280.webp');
     background-position: 0 0, 60% 0;
   }
 
@@ -2054,7 +2054,7 @@ a {
   }
 
   .sprzet {
-    background-image: linear-gradient(#0000, #0000), url('../images/Sound_Studio_ARTREPUBLICA_2560x1707px_A.webp');
+    background-image: linear-gradient(#0000, #0000), url('../images/Sound_Studio_sprzet_960.webp');
     background-position: 0 0, 45% 0;
   }
 
