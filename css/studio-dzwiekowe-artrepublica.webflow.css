@@ -1,20 +1,4 @@
 @font-face {
-  font-family: Sundaylove;
-  src: url('../fonts/SundayloveBold.woff2') format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Sundaylove;
-  src: url('../fonts/Sundaylove.woff2') format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: Open Sans Local;
   src: url('../fonts/OpenSans-Light.woff2') format("woff2");
   font-weight: 300;
@@ -2170,20 +2154,6 @@ a {
 }
 
 
-@font-face {
-  font-family: 'Sundaylove';
-  src: url('../fonts/SundayloveBold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sundaylove';
-  src: url('../fonts/Sundaylove.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 @font-face {
   font-family: 'Open Sans Local';
   src: url('../fonts/OpenSans-Light.woff2') format('woff2');
