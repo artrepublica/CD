@@ -88,7 +88,7 @@
 
 body {
   color: var(--white);
-  font-family: Open Sans Local, sans-serif;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -105,8 +105,9 @@ a {
   backdrop-filter: none;
   background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.webp');
   background-position: 0 0;
-  background-size: auto;
-  font-family: Open Sans Local, sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-weight: 400;
 }
 
@@ -155,7 +156,7 @@ a {
   text-transform: uppercase;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: Open Sans Local, sans-serif;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-size: 13px;
   font-weight: 600;
   transition: transform .2s, opacity .2s;
@@ -235,7 +236,7 @@ a {
   letter-spacing: 10px;
   margin-top: -9px;
   margin-bottom: 46px;
-  font-family: Open Sans Local, sans-serif;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-size: 81px;
   display: none;
 }
@@ -352,10 +353,6 @@ a {
   padding-bottom: 20px;
 }
 
-.section-2.dark.mlims-skrzypce {
-  display: none;
-}
-
 .txt {
   text-align: left;
   overflow: hidden;
@@ -448,7 +445,7 @@ a {
 
 .text-span-3, .text-span-4 {
   color: var(--white);
-  font-family: Open Sans Local, sans-serif;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-size: 22px;
   font-weight: 600;
 }
@@ -488,7 +485,7 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  font-family: Open Sans Local, sans-serif;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-weight: 500;
   display: flex;
 }
@@ -497,7 +494,7 @@ a {
   color: var(--white);
   align-self: center;
   margin-bottom: 0;
-  font-family: Open Sans Local, sans-serif;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-size: 18px;
   font-weight: 500;
 }
@@ -633,7 +630,7 @@ a {
 
 .text-span-6 {
   white-space: nowrap;
-  font-family: Open Sans Local, sans-serif;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-size: 22px;
   font-weight: 400;
 }
@@ -987,7 +984,7 @@ a {
   text-transform: uppercase;
   padding-left: 10px;
   padding-right: 30px;
-  font-family: Open Sans Local, sans-serif;
+  font-family: Open Sans Local, Tahoma, sans-serif;
   font-size: 13px;
   font-weight: 600;
   transition: transform .2s, opacity .2s;
