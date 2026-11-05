@@ -23,7 +23,7 @@
 }
 
 :root {
-  --white: white;
+  --white: #fff;
   --black: black;
   --dodger-blue-light: #0095ff;
   --menu: #962b2b;
@@ -892,7 +892,7 @@ a {
   line-height: 26px;
 }
 
-.bloure {
+.blur {
   z-index: -2147483648;
   background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.webp');
   background-position: 0 0;
