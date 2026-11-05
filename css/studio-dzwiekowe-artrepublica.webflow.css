@@ -147,6 +147,7 @@ a {
   background-size: auto;
   position: fixed;
   inset: 0% 0% auto;
+  overflow: hidden;
 }
 
 .nav-link {
@@ -1650,6 +1651,7 @@ a {
   }
 
   .lottie {
+    width: 100%;
     overflow: hidden;
   }
 
