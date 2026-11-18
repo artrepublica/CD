@@ -432,10 +432,15 @@ def currency_pricing(root, body):
     for start, end, text in reversed(parsed.edits):
         body = body[:start] + text + body[end:]
     controls = '''<div class="ar-currency" hidden>
-<label for="ar-currency-select">Currency
-<select id="ar-currency-select" aria-describedby="ar-currency-note">
-<option value="EUR">EUR · Euro (€)</option><option value="USD">USD · US dollar ($)</option><option value="GBP">GBP · Pound sterling (£)</option><option value="PLN" selected>PLN · Polish zloty (zł)</option>
-</select></label><p id="ar-currency-note" data-currency-note role="status" aria-live="polite"></p></div>'''
+<div class="ar-currency-field"><span id="ar-currency-label">Currency</span>
+<div class="ar-currency-picker">
+<button id="ar-currency-select" type="button" aria-labelledby="ar-currency-label ar-currency-value" aria-haspopup="menu" aria-expanded="false" aria-controls="ar-currency-menu" aria-describedby="ar-currency-note"><span id="ar-currency-value">EUR · Euro (€)</span></button>
+<div id="ar-currency-menu" role="menu" aria-labelledby="ar-currency-label" hidden>
+<button type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-currency="EUR">EUR · Euro (€)</button>
+<button type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-currency="USD">USD · US dollar ($)</button>
+<button type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-currency="GBP">GBP · Pound sterling (£)</button>
+<button type="button" role="menuitemradio" aria-checked="false" tabindex="-1" data-currency="PLN">PLN · Polish zloty (zł)</button>
+</div></div></div><p id="ar-currency-note" data-currency-note role="status" aria-live="polite"></p></div>'''
     anchor = '<div class="ar-pricing__inner">'
     if body.count(anchor) != 1:
         raise ValueError('Pricing layout changed: currency control placement needs review')
@@ -443,8 +448,12 @@ def currency_pricing(root, body):
     style = '''<style>
 /* Keep the sliding title from compositing a backdrop-filter over the panels below. */
 .ar-pricing-title{contain:paint;isolation:isolate}.ar-pricing-title .dzial{-webkit-backdrop-filter:none;backdrop-filter:none}
-.ar-currency[hidden]{display:none}.ar-currency{display:grid;grid-template-columns:minmax(0,235px) minmax(0,580px);align-items:start;justify-content:start;gap:12px 22px;margin:0 0 20px;padding:15px 18px;background:var(--ar-panel);border-radius:var(--ar-radius);-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);color:#fff;text-align:left}
-.ar-currency label{display:grid;gap:5px;flex:0 1 235px;max-width:100%;font-size:12px;line-height:1.5;letter-spacing:.06em}.ar-currency select{width:100%;max-width:100%;min-height:42px;border:0;outline:none;box-shadow:none;border-radius:8px;padding:8px 42px 8px 10px;appearance:none;-webkit-appearance:none;background-color:rgba(0,68,119,.55);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='white' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:14px 14px;color:#fff;font-family:inherit;font-size:14px;font-weight:600;line-height:1.4;letter-spacing:normal}.ar-currency select:hover,.ar-currency select:focus-visible{outline:none;box-shadow:none;background-color:rgba(0,54,98,.85)}.ar-currency option{background:#fff;color:#183044}.ar-currency p{margin:0;padding-top:23px;font-size:12px;line-height:1.6;max-width:580px}.ar-price-amount{font-variant-numeric:tabular-nums}
+.ar-currency[hidden]{display:none}.ar-currency{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,235px) minmax(0,580px);align-items:start;justify-content:start;gap:12px 22px;margin:0 0 20px;padding:15px 18px;background:var(--ar-panel);border-radius:var(--ar-radius);-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);color:#fff;text-align:left}
+.ar-currency-field{display:grid;gap:5px;flex:0 1 235px;max-width:100%;font-size:12px;line-height:1.5;letter-spacing:.06em}.ar-currency #ar-currency-select{width:100%;max-width:100%;min-height:42px;border:0;outline:none;box-shadow:none;border-radius:8px;padding:8px 42px 8px 10px;appearance:none;-webkit-appearance:none;background-color:rgba(0,68,119,.55);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='white' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:14px 14px;color:#fff;font-family:inherit;font-size:14px;font-weight:600;line-height:1.4;letter-spacing:normal}.ar-currency #ar-currency-select:hover,.ar-currency #ar-currency-select:focus-visible{outline:none;box-shadow:none;background-color:rgba(0,54,98,.85)}.ar-currency-picker{position:relative;min-width:0}.ar-currency #ar-currency-select{text-align:left;cursor:pointer}
+.ar-currency #ar-currency-menu[hidden]{display:none}.ar-currency #ar-currency-menu{position:absolute;top:calc(100% + 6px);left:0;width:100%;z-index:3;background:rgba(0,68,119,.96);border:0;outline:none;box-shadow:none;border-radius:8px;padding:5px;overflow:hidden}
+.ar-currency #ar-currency-menu button{position:relative;display:block;width:100%;min-height:42px;padding:10px 28px 10px 10px;border:0;outline:none;box-shadow:none;border-radius:5px;background:transparent;color:#fff;font-family:inherit;font-size:14px;font-weight:600;line-height:1.4;letter-spacing:normal;text-align:left;cursor:pointer}
+.ar-currency #ar-currency-menu button[aria-checked="true"]{background:rgba(0,149,255,.28)}.ar-currency #ar-currency-menu button[aria-checked="true"]:after{content:"✓";position:absolute;right:10px}
+.ar-currency #ar-currency-menu button:hover,.ar-currency #ar-currency-menu button:focus-visible{background:rgba(0,149,255,.55);outline:none;box-shadow:none}.ar-currency p{margin:0;padding-top:23px;font-size:12px;line-height:1.6;max-width:580px}.ar-price-amount{font-variant-numeric:tabular-nums}
 @media(max-width:560px){.ar-currency{grid-template-columns:minmax(0,1fr);padding:13px 16px;gap:10px}.ar-currency p{padding-top:0}}
 </style>'''
     body = body.replace('</head>', style + '</head>', 1)
