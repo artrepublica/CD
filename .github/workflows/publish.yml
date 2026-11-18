@@ -3,6 +3,8 @@ name: Publikacja Webflow z przekierowaniami
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "english/**"
   workflow_dispatch:
 
 permissions:
@@ -66,7 +68,7 @@ jobs:
           tracked = subprocess.check_output(["git", "ls-files", "-z"]).decode().split("\0")
           for name in filter(None, tracked):
               relative = Path(name)
-              if relative.parts[0] in {".git", ".github"} or relative.name == ".DS_Store" or name == "redirects.json":
+              if relative.parts[0] in {".git", ".github", "english"} or relative.name == ".DS_Store" or name == "redirects.json":
                   continue
               source_file = root / relative
               if source_file.is_symlink() or not source_file.resolve().is_relative_to(root):
