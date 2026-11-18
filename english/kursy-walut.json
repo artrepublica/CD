@@ -1,0 +1,14 @@
+{
+  "model": "indicative",
+  "default_currency": "EUR",
+  "source_url": "https://api.nbp.pl/api/exchangerates/tables/A/?format=json",
+  "table": "223/A/NBP/2026",
+  "effective_date": "2026-11-17",
+  "fetched_utc": "2026-11-18T10:34:36.764493+00:00",
+  "pln_per_unit": {
+    "PLN": 1,
+    "USD": 4.0022,
+    "EUR": 4.4032,
+    "GBP": 5.2821
+  }
+}
