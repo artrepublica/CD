@@ -44,7 +44,7 @@ jobs:
           import subprocess
           from urllib.parse import urlsplit
 
-          from english.engine import language_menu
+          from english.engine import alternate_language_tags, language_menu
 
           root = Path.cwd().resolve()
           output = Path(os.environ["SITE_OUTPUT"]).resolve()
@@ -87,6 +87,9 @@ jobs:
               if relative.suffix == ".html":
                   body = language_menu(source_file.read_text(encoding="utf-8"), name, "pl")
                   body = body.replace(css_name + '"', css_name + '?v=' + css_version + '"')
+                  alternates = alternate_language_tags(name)
+                  if alternates:
+                      body = body.replace("</head>", alternates + "</head>", 1)
                   destination.write_text(body, encoding="utf-8")
               else:
                   shutil.copyfile(source_file, destination)

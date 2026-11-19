@@ -62,6 +62,22 @@ def public_en(name):
     return EN_ORIGIN + ('/' if name == 'index.html' else '/' + name.removesuffix('.html'))
 
 
+def language_urls(source):
+    return {
+        'pl': ORIGIN + ('/' if source == 'index.html' else '/' + source),
+        'en': public_en(PAGES[source]),
+    }
+
+
+def alternate_language_tags(source):
+    if source not in PAGES or source == '404.html':
+        return ''
+    return ''.join(
+        f'<link rel="alternate" hreflang="{lang}" href="{html.escape(url, quote=True)}">'
+        for lang, url in language_urls(source).items()
+    )
+
+
 LANGUAGE_MENU = re.compile(r'(<div class="language_div">)(.*?)</div>', re.S)
 
 
@@ -69,8 +85,7 @@ def language_menu(body, source, active):
     """Render Webflow's language controls for the current pair at publish time."""
     if source not in PAGES or source == '404.html':
         return LANGUAGE_MENU.sub('', body)
-    urls = {'pl': ORIGIN + ('/' if source == 'index.html' else '/' + source),
-            'en': public_en(PAGES[source])}
+    urls = language_urls(source)
 
     def replace_menu(match):
         links = []
@@ -262,10 +277,8 @@ class Page(HTMLParser):
         result = language_menu(result, self.name, 'en')
         relative_review = posixpath.relpath('translation-review.html', posixpath.dirname(PAGES[self.name]) or '.')
         seo = ('<meta name="robots" content="noindex,nofollow">'
-               '<link rel="canonical" href="' + public_en(PAGES[self.name]) + '">'
-               '<link rel="alternate" hreflang="en" href="' + public_en(PAGES[self.name]) + '">'
-               '<link rel="alternate" hreflang="pl" href="' + ORIGIN + ('/' if self.name == 'index.html' else '/' + self.name) + '">')
-        result = result.replace('</head>', seo + '</head>', 1)
+               '<link rel="canonical" href="' + public_en(PAGES[self.name]) + '">')
+        result = result.replace('</head>', seo + alternate_language_tags(self.name) + '</head>', 1)
         if not preview:
             return result
         badge = ('<aside style="position:fixed;bottom:8px;left:8px;z-index:2147483646;'
