@@ -103,9 +103,12 @@ a {
   background-color: var(--black);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
+  vertical-align: middle;
   background-image: url('../images/Sound_Studio_ARTREPUBLICA_B.webp');
   background-size: cover;
   background-attachment: fixed;
+  margin-left: auto;
+  margin-right: auto;
   font-family: Open Sans Local, Tahoma, sans-serif;
   font-weight: 400;
 }
@@ -169,6 +172,11 @@ a {
 .nav-link.w--current {
   color: var(--white);
   cursor: pointer;
+}
+
+.nav-link.language {
+  opacity: .8;
+  padding-right: 0;
 }
 
 .image {
@@ -1413,6 +1421,12 @@ a {
   text-decoration: underline;
 }
 
+.language_div {
+  justify-content: flex-end;
+  align-items: stretch;
+  display: inline;
+}
+
 @media screen and (max-width: 991px) {
   .nav-link {
     font-size: 18px;
@@ -1432,10 +1446,16 @@ a {
 
   .menu-button {
     float: left;
+    margin-left: 4px;
+    overflow: hidden;
   }
 
   .menu-button.w--open {
     background-color: #0000;
+  }
+
+  .icon {
+    transform: scale(2);
   }
 
   .paragraph {
@@ -1937,6 +1957,10 @@ a {
 }
 
 @media screen and (max-width: 479px) {
+  .menu-button {
+    padding-right: 0;
+  }
+
   .paragraph {
     letter-spacing: 6px;
     font-size: 26px;
