@@ -62,6 +62,28 @@ def public_en(name):
     return EN_ORIGIN + ('/' if name == 'index.html' else '/' + name.removesuffix('.html'))
 
 
+LANGUAGE_MENU = re.compile(r'(<div class="language_div">)(.*?)</div>', re.S)
+
+
+def language_menu(body, source, active):
+    """Render Webflow's language controls for the current pair at publish time."""
+    if source not in PAGES or source == '404.html':
+        return LANGUAGE_MENU.sub('', body)
+    urls = {'pl': ORIGIN + ('/' if source == 'index.html' else '/' + source),
+            'en': public_en(PAGES[source])}
+
+    def replace_menu(match):
+        links = []
+        for lang, url in urls.items():
+            current = ' aria-current="page"' if lang == active else ''
+            label = 'Polski' if lang == 'pl' else 'English'
+            links.append(f'<a class="nav-link language w-nav-link" href="{url}" '
+                         f'hreflang="{lang}" aria-label="{label}"{current}>|&nbsp;&nbsp;{lang.upper()}</a>')
+        return match[1] + ' '.join(links) + '</div>'
+
+    return LANGUAGE_MENU.sub(replace_menu, body)
+
+
 def mapped_path(value, source_page):
     parsed = urlsplit(urljoin(ORIGIN + '/' + source_page, value))
     if parsed.netloc != urlsplit(ORIGIN).netloc:
@@ -187,6 +209,8 @@ class Page(HTMLParser):
                 for match in re.finditer(re.escape(json.dumps(literal, ensure_ascii=False)), data):
                     self.item(start + match.start() + 1, start + match.end() - 1,
                               literal, 'javascript', 'pricing clipboard message')
+        elif any('language_div' in e['attrs'].get('class', '').split() for e in self.stack):
+            return  # Fixed language names come from the shared menu renderer.
         elif not any(e['tag'] in SKIP or e['excluded'] for e in self.stack):
             self.item(start, end, self.source[start:end], 'text', '/'.join(e['tag'] for e in self.stack[-3:]))
 
@@ -235,6 +259,7 @@ class Page(HTMLParser):
         result = self.source
         for start, end, replacement in reversed(edits):
             result = result[:start] + replacement + result[end:]
+        result = language_menu(result, self.name, 'en')
         relative_review = posixpath.relpath('translation-review.html', posixpath.dirname(PAGES[self.name]) or '.')
         seo = ('<meta name="robots" content="noindex,nofollow">'
                '<link rel="canonical" href="' + public_en(PAGES[self.name]) + '">'
