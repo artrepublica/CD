@@ -104,6 +104,10 @@ def build(repo=REPO, config=HERE, output=OUTPUT, production=False):
                 continue
             body = read_source(path, repo)
             body = body.replace('<script>' + PL_REDIRECT + '</script>', '')
+            # Keep test deployments out of the production analytics container.
+            if not production:
+                body = re.sub(r'  <!-- Google Tag Manager -->.*?<!-- End Google Tag Manager -->\n',
+                              '', body, flags=re.S)
             target = root / 'zrodlo' / rel
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(body, encoding='utf-8')

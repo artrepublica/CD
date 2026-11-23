@@ -31,6 +31,15 @@ so that it cannot create a redirect loop on Pages. Polish files and CNAME remain
 unchanged. The Polish publish workflow excludes the entire `english/` directory;
 commits touching only `english/**` do not trigger Polish Pages deployment.
 
+Production pages inherit the `GTM-N8TGSZM9` container from the Polish export;
+test builds remove it to keep preview traffic out of GA4. Do not add a separate
+GA4 script: GA4 is configured inside GTM. Consent defaults to denied for
+analytics and advertising before the container loads. A CMP must update consent
+after the visitor's choice; the loader does not provide a consent banner.
+Denied consent can still allow cookieless Google pings. Custom tags in GTM must
+have their consent requirements configured separately. No noscript iframe is
+included because it cannot honor this JavaScript consent setup.
+
 ## Updating and checking
 
 ```sh
