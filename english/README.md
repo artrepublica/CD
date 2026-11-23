@@ -34,11 +34,18 @@ commits touching only `english/**` do not trigger Polish Pages deployment.
 Production pages inherit the `GTM-N8TGSZM9` container from the Polish export;
 test builds remove it to keep preview traffic out of GA4. Do not add a separate
 GA4 script: GA4 is configured inside GTM. Consent defaults to denied for
-analytics and advertising before the container loads. A CMP must update consent
-after the visitor's choice; the loader does not provide a consent banner.
+analytics and advertising before the container loads. The local consent panel
+(`js/consent.js`, `css/consent.css`) supports accept, reject, separate analytics
+and advertising preferences, and reopening settings. It saves the choice in
+localStorage for 180 days and restores consent synchronously before GTM starts.
+Storage failure does not grant consent automatically. The panel follows the
+page language (Polish or English); choices are separate for each origin.
 Denied consent can still allow cookieless Google pings. Custom tags in GTM must
 have their consent requirements configured separately. No noscript iframe is
 included because it cannot honor this JavaScript consent setup.
+Do not install another banner or a conflicting consent-default tag in GTM.
+After deployment, verify the four consent types in Tag Assistant on first
+visit, after accept/reject, after changing settings, and on a return visit.
 
 ## Updating and checking
 

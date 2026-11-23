@@ -47,6 +47,8 @@ class BuildChecks(unittest.TestCase):
             self.assertNotIn('/lokalizacje/', body)
             self.assertNotIn('GTM-N8TGSZM9', body)
             self.assertNotIn('googletagmanager.com', body)
+            self.assertNotIn('src="/js/consent.js"', body)
+            self.assertNotIn('href="/css/consent.css"', body)
         self.assertIn('href="/pricing"', (output / 'index.html').read_text())
         self.assertIn('https://soundstudio.artrepublica.com/pricing"', (output / 'pricing.html').read_text())
         self.assertIn('X-Robots-Tag: noindex', (output / '_headers').read_text())
@@ -100,6 +102,10 @@ class BuildChecks(unittest.TestCase):
             body = (output / name).read_text()
             self.assertEqual(body.count('GTM-N8TGSZM9'), 1)
             self.assertLess(body.index("gtag('consent', 'default'"),
+                            body.index("event:'gtm.js'"))
+            self.assertIn('src="/js/consent.js"', body)
+            self.assertIn('href="/css/consent.css"', body)
+            self.assertLess(body.index('src="/js/consent.js"'),
                             body.index("event:'gtm.js'"))
 
 
